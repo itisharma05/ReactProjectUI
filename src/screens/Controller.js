@@ -1,6 +1,7 @@
 import React from "react";
 import Home from "../screens/home/Home";
-//import Details from "../screens/details/Details";
+//import LoginModal from '../common/login/LoginModal';
+import Details from "../screens/details/Details";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import BookShow from "../screens/bookshow/BookShow";
 import Confirmation from "../screens/confirmation/Confirmation";
@@ -14,12 +15,17 @@ const Controller = () => {
         <Route
           exact
           path="/"
-          render={(props) => <Home {...props} baseUrl={baseUrl} />}
+          render={({history},props) => <Home history={history} {...props} baseUrl={baseUrl} />}
         />
-        {/*<Route
+          {/*<Route
+              exact
+              path="/login"
+              render={(props) => <LoginModal {...props} baseUrl={baseUrl} />}
+          />*/}
+         <Route
           path="/movie/:id"
           render={(props) => <Details {...props} baseUrl={baseUrl} />}
-        />*/}
+        />
         <Route
           path="/bookshow/:id"
           render={(props) => <BookShow {...props} baseUrl={baseUrl} />}
