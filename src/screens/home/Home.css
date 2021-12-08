@@ -1,0 +1,34 @@
+.movie-heading{
+    background-color: #ff9999;
+    padding: 8px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.released-movie-and-filter{
+    display: flex;
+    margin: 16px;
+}
+
+.grid-released-movie{
+    justify-content:flex-start;
+    align-self:flex-start;
+    flex-direction:row;
+    width: 76%;
+}
+
+.released-mov{
+    cursor:pointer;
+}
+
+.grid-movie-filter{
+    justify-content:flex-start;
+    align-self:flex-start;
+    flex-direction:row;
+    width:24%;
+    padding-left:16px
+}
+
+
+
+
