@@ -3,7 +3,7 @@ import './Header.css';
 import Button from "@material-ui/core/Button";
 import {Grid, Link} from '@material-ui/core';
 import logo from './../../assets/logo.svg';
-import LModal from "../login/LModal";
+//import LModal from "../login/LModal";
 import Modal from "react-modal";
 
 const Header = (props) => {
@@ -33,7 +33,7 @@ const Header = (props) => {
                         setModalShow(true);
                     }}>{props.btnName}</Button>
                 </Grid>
-                <LModal show={modalShow} onHide={() => setModalShow(false)}/>
+                {/*<LModal show={modalShow} onHide={() => setModalShow(false)}/>*/}
             </div>
         )
 }
