@@ -14,7 +14,7 @@ const Header = (props) => {
     useEffect( () => {
 
         function loadMovie () {
-            const str = props.baseUrl + "";
+            const str = `"/movie/"${props.id}`;
             setPath(str);
 
         }
@@ -28,7 +28,7 @@ const Header = (props) => {
                     <a href="/">
                         <img className="brand" alt="" src={logo}/>
                     </a>
-                    {props.pageName === 'Details'? <a className="book-btn-aTag" href="/movie/246165d2-a238-11e8-9077-720006ceb890"><Button variant="contained" color="primary" disableElevation style={{left:521}} >BooK Show</Button></a> : ""}
+                    {props.pageName === 'Details'? <a className="book-btn-aTag" href={path}><Button variant="contained" color="primary" disableElevation style={{left:521}} >BooK Show</Button></a> : ""}
                     <Button className="login-btn custom-btn" variant="contained" color="default" onClick={() => {
                         setModalShow(true);
                     }}>{props.btnName}</Button>

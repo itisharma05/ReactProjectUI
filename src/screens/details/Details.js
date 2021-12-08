@@ -54,7 +54,7 @@ const Details = (props) => {
 
     return (
         <div>
-            <Header btnName="LOGIN" baseUrl={props.baseUrl} pageName="Details" />
+            <Header btnName="LOGIN" baseUrl={props.baseUrl} pageName="Details" id={props.match.params.id} />
             <Typography >
                 <Link to="/" className="back-btn" style={ {cursor:"pointer" }}>&#60; Back to Home</Link>
             </Typography>
